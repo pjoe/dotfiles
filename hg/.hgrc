@@ -1,0 +1,37 @@
+[extensions]
+convert =
+rebase =
+mq =
+mercurial_keyring =
+graphlog =
+color =
+largefiles =
+pager =
+extdiff =
+histedit =
+
+# auth
+%include ~/.hgauth
+
+[ui]
+editor = vim +star
+[phases]
+publish = True
+[web]
+push_ssl = False
+allow_push = *
+[alias]
+sl = log --style=$HOME/dotfiles/hg/mercurial-cli-templates/map-cmdline.slog
+nl = log --style=$HOME/dotfiles/hg/mercurial-cli-templates/map-cmdline.nlog
+sgl = glog --style=$HOME/dotfiles/hg/mercurial-cli-templates/map-cmdline.sglog
+
+[tortoisehg]
+editor = gvim
+[merge-tools]
+meld.executable = meld
+meld.args = --label=local $local --label=base $base --label=other $other -o $output
+[pager]
+pager = LESS='FRX' less
+attend = annotate, cat, diff, export, glog, log, qdiff, sgl, sl, st
+[extdiff]
+cmd.meld =
