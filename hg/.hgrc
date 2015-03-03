@@ -35,3 +35,7 @@ pager = LESS='FRX' less
 attend = annotate, cat, diff, export, glog, log, qdiff, sgl, sl, st
 [extdiff]
 cmd.meld =
+
+cmd.vimdiff = vim
+opts.vimdiff = -f '+next' '+execute "DirDiff" fnameescape(argv(0)) fnameescape(argv(1))'
+

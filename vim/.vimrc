@@ -50,6 +50,8 @@ inoremap <silent> <C-j> <c-o>:TmuxNavigateDown<cr>
 inoremap <silent> <C-k> <c-o>:TmuxNavigateUp<cr>
 inoremap <silent> <C-l> <c-o>:TmuxNavigateRight<cr>
 
+Plugin 'DirDiff.vim'
+
 call vundle#end()
 
 
