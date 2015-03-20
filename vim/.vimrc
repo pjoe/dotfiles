@@ -58,6 +58,8 @@ call vundle#end()
 filetype plugin indent on
 set t_Co=256
 colorscheme molokai
+set mouse=a
+set ttymouse=xterm2
 set fillchars-=vert:\| | set fillchars+=vert:\ 
 set number
 set tabstop=4 shiftwidth=4
