@@ -9,6 +9,7 @@ largefiles =
 pager =
 extdiff =
 histedit =
+shelve =
 
 # auth
 %include ~/.hgauth
