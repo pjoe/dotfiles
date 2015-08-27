@@ -20,10 +20,12 @@ Plugin 'tomasr/molokai'
 
 Plugin 'bling/vim-airline'
 set laststatus=2
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
+let g:airline_left_sep=' '
+let g:airline_right_sep=' '
 
 Plugin 'ctrlp.vim'
-let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_cmd = 'CtrlPBuffer'
 
 Plugin 'fatih/vim-go'
 
@@ -52,6 +54,9 @@ inoremap <silent> <C-l> <c-o>:TmuxNavigateRight<cr>
 
 Plugin 'DirDiff.vim'
 
+Plugin 'Chiel92/vim-autoformat'
+noremap <F3> :Autoformat<CR>
+
 call vundle#end()
 
 
@@ -62,6 +67,7 @@ set mouse=a
 set ttymouse=xterm2
 set fillchars-=vert:\| | set fillchars+=vert:\ 
 set number
-set tabstop=4 shiftwidth=4
+set expandtab softtabstop=4 shiftwidth=4
+autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2
 set timeoutlen=100 ttimeoutlen=0
 imap <C-Space> <C-X><C-O>
