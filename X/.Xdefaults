@@ -1,8 +1,8 @@
 #URxvt*font: xft:DejaVu Sans Mono for Powerline:pixelsize=14:antialias=true:hinting=true
-URxvt*font: xft:DejaVu Sans Mono for Powerline:size=11:antialias=true:hinting=true:hintstyle=hintslight
+URxvt*font: xft:DejaVu Sans Mono for Powerline:size=17:antialias=true:hinting=true:hintstyle=hintslight
 URxvt*letterSpace: -1
 
-URxvt.geometry: 120x35
+URxvt.geometry: 170x45
 
 # disable scrollbar
 URxvt.scrollBar: false
@@ -38,3 +38,5 @@ URxvt*color12: #5f5fee
 URxvt*color13: #bb88dd
 URxvt*color14: #4eb4fa
 URxvt*color15: #d0d0d0
+
+Xcursor.theme: DMZ-White

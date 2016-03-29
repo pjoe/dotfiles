@@ -57,6 +57,8 @@ Plugin 'DirDiff.vim'
 Plugin 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR>
 
+Plugin 'mrk21/yaml-vim'
+
 call vundle#end()
 
 

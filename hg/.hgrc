@@ -28,6 +28,11 @@ sgl = glog --style=$HOME/dotfiles/hg/mercurial-cli-templates/map-cmdline.sglog
 
 [tortoisehg]
 editor = gvim
+fontcomment = Monospace,12,-1,5,50,0,0,0,0,0
+fontdiff = Monospace,12,-1,5,50,0,0,0,0,0
+fontlist = Ubuntu,11,-1,5,63,0,0,0,0,0
+fontlog = Monospace,12,-1,5,50,0,0,0,0,0
+fontoutputlog = Ubuntu,10,-1,5,63,0,0,0,0,0
 [merge-tools]
 meld.executable = meld
 meld.args = --label=local $local --label=base $base --label=other $other -o $output
