@@ -1,5 +1,5 @@
 #URxvt*font: xft:DejaVu Sans Mono for Powerline:pixelsize=14:antialias=true:hinting=true
-URxvt*font: xft:DejaVu Sans Mono:size=12:antialias=true:hinting=true:hintstyle=hintslight
+URxvt*font: xft:DejaVu Sans Mono:size=11:antialias=true:hinting=true:hintstyle=hintslight
 URxvt*letterSpace: -1
 
 URxvt.geometry: 170x45
