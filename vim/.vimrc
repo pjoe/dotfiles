@@ -59,6 +59,8 @@ noremap <F3> :Autoformat<CR>
 
 Plugin 'mrk21/yaml-vim'
 
+Plugin 'tpope/vim-fugitive'
+
 call vundle#end()
 
 
@@ -67,7 +69,7 @@ set t_Co=256
 colorscheme molokai
 set mouse=a
 set ttymouse=xterm2
-set fillchars-=vert:\| | set fillchars+=vert:\ 
+set fillchars-=vert:\| | set fillchars+=vert:\
 set number
 set expandtab softtabstop=4 shiftwidth=4
 autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2
