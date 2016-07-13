@@ -2,6 +2,11 @@
 URxvt*font: xft:DejaVu Sans Mono:size=11:antialias=true:hinting=true:hintstyle=hintslight
 URxvt*letterSpace: -1
 
+# Dynamic font changing
+URxvt.keysym.C-0: command:\033]710;xft:DejaVu Sans mono:size=11:antialias=true:hinting=true:hintstyle=hintslight\007
+URxvt.keysym.C-plus: command:\033]710;xft:DejaVu Sans mono:size=16:antialias=true:hinting=true:hintstyle=hintslight\007
+URxvt.keysym.C-minus: command:\033]710;xft:DejaVu Sans mono:size=8:antialias=true:hinting=true:hintstyle=hintslight\007
+
 URxvt.geometry: 170x45
 
 # disable scrollbar
