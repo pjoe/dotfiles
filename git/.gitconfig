@@ -1,0 +1,20 @@
+[include]
+        path = .gitauth
+[core]
+	editor = vim
+[push]
+	default = simple
+[merge]
+	tool = meld
+[alias]
+	sgl = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(cyan)- %an%C(reset)%C(bold yellow)%d%C(reset) %C(white)%+s%C(reset)'  --all
+	st = status
+	ci = commit
+	co = checkout
+[diff]
+	tool = meld
+[gui]
+	fontui = -family \"DejaVu Sans\" -size 16 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"DejaVu Sans Mono\" -size 16 -weight normal -slant roman -underline 0 -overstrike 0
+[gitreview]
+	remote = origin

@@ -11,4 +11,5 @@ ln -sfv "$DOTFILES_DIR/hg/.hgrc" ~
 ln -sfv "$DOTFILES_DIR/tmux/.tmux.conf" ~
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
 ln -sfv "$DOTFILES_DIR/X/.Xdefaults" ~
+ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 
