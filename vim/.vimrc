@@ -1,5 +1,11 @@
 if has('nvim')
-	tnoremap <Esc> <C-\><C-n>
+    tnoremap <Esc> <C-\><C-n>
+else
+    set nocompatible
+    filetype plugin indent on
+    set t_Co=256
+    set mouse=a
+    set ttymouse=xterm2
 endif
 
 call plug#begin()
@@ -35,5 +41,6 @@ colorscheme molokai
 set fillchars-=vert:\| | set fillchars+=vert:\ 
 set number
 set expandtab softtabstop=4 shiftwidth=4
+autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2
 set timeoutlen=100 ttimeoutlen=0
 
