@@ -33,6 +33,9 @@ Plug 'mrk21/yaml-vim', { 'for': 'yaml' }
 Plug 'Chiel92/vim-autoformat'
 noremap <F3> :Autoformat<CR>
 
+Plug 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_cmd = 'CtrlPBuffer'
+
 
 call plug#end()
 
