@@ -41,10 +41,10 @@ call plug#end()
 
 
 colorscheme molokai
-set fillchars-=vert:\| | set fillchars+=vert:\ 
+set fillchars-=vert:\| | set fillchars+=vert:\
 set number
 set expandtab softtabstop=4 shiftwidth=4
 autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2
-set timeoutlen=100 ttimeoutlen=0
+set timeoutlen=1000 ttimeoutlen=0
 set listchars=tab:>·,trail:~,extends:>,precedes:<,space:⋅
 
