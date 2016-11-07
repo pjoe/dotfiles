@@ -1,17 +1,15 @@
-if has('nvim')
-    tnoremap <Esc> <C-\><C-n>
-else
-    set nocompatible
-    filetype plugin indent on
-    set t_Co=256
-    set mouse=a
-    set ttymouse=xterm2
-endif
+set nocompatible
+filetype plugin indent on
+set t_Co=256
+set mouse=a
+set ttymouse=xterm2
 
 call plug#begin()
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 map <F7> :NERDTreeToggle<CR>
+let g:NERDTreeMapJumpNextSibling = '<Nop>'
+let g:NERDTreeMapJumpPrevSibling = '<Nop>'
 
 Plug 'tomasr/molokai'
 
@@ -39,12 +37,36 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 
 call plug#end()
 
-
+" colors
 colorscheme molokai
-set fillchars-=vert:\| | set fillchars+=vert:\
-set number
-set expandtab softtabstop=4 shiftwidth=4
-autocmd FileType javascript setlocal expandtab shiftwidth=2 softtabstop=2
-set timeoutlen=1000 ttimeoutlen=0
-set listchars=tab:>·,trail:~,extends:>,precedes:<,space:⋅
+syntax enable
 
+" tabs
+set tabstop=4
+set softtabstop=4
+set expandtab
+set shiftwidth=4
+
+set number
+set cursorline
+filetype indent on
+set wildmenu
+set lazyredraw
+set showmatch
+
+" search
+set incsearch
+set hlsearch
+
+set fillchars-=vert:\| | set fillchars+=vert:\
+set listchars=tab:>·,trail:~,extends:>,precedes:<,space:⋅
+set timeoutlen=1000 ttimeoutlen=0
+
+autocmd FileType javascript setlocal tabstop=2 softtabstop=2 expandtab shiftwidth=2
+
+" move to beginning/end of line
+nnoremap B ^
+nnoremap E $
+
+let mapleader=","
+nnoremap <leader><space> :nohlsearch<CR>
