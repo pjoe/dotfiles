@@ -3,11 +3,12 @@ filetype plugin indent on
 set t_Co=256
 set mouse=a
 set ttymouse=xterm2
+let mapleader=","
 
 call plug#begin()
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-map <F7> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 let g:NERDTreeMapJumpNextSibling = '<Nop>'
 let g:NERDTreeMapJumpPrevSibling = '<Nop>'
 
@@ -29,7 +30,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'mrk21/yaml-vim', { 'for': 'yaml' }
 
 Plug 'Chiel92/vim-autoformat'
-noremap <F3> :Autoformat<CR>
+noremap <leader>f :Autoformat<CR>
 
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_cmd = 'CtrlPMixed'
@@ -68,5 +69,4 @@ autocmd FileType javascript setlocal tabstop=2 softtabstop=2 expandtab shiftwidt
 nnoremap B ^
 nnoremap E $
 
-let mapleader=","
 nnoremap <leader><space> :nohlsearch<CR>
