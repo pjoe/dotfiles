@@ -7,9 +7,9 @@ export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 [ -d "$DOTFILES_DIR/.git" ] && git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master
 
 # Bunch of symlinks
-ln -sfv "$DOTFILES_DIR/hg/.hgrc" ~
+#ln -sfv "$DOTFILES_DIR/hg/.hgrc" ~
 ln -sfv "$DOTFILES_DIR/tmux/.tmux.conf" ~
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
-ln -sfv "$DOTFILES_DIR/X/.Xdefaults" ~
+#ln -sfv "$DOTFILES_DIR/X/.Xdefaults" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 
