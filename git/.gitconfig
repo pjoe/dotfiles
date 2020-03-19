@@ -2,6 +2,7 @@
         path = .gitauth
 [core]
 	editor = vim
+    pager = less
 [push]
 	default = simple
 [merge]
@@ -16,5 +17,17 @@
 [gui]
 	fontui = -family \"DejaVu Sans\" -size 16 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family \"DejaVu Sans Mono\" -size 16 -weight normal -slant roman -underline 0 -overstrike 0
-[gitreview]
-	remote = origin
+[gitflow "branch"]
+	master = master
+	develop = develop
+[gitflow "prefix"]
+	feature = feature/
+	bugfix = bugfix/
+	release = release/
+	hotfix = hotfix/
+	support = support/
+	versiontag = 
+[gitflow "path"]
+	hooks = C:/Users/pjo/git/node-adfs-test/.git/hooks
+[fetch]
+	prune = true
