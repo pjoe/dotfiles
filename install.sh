@@ -11,5 +11,16 @@ export DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ln -sfv "$DOTFILES_DIR/tmux/.tmux.conf" ~
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
 #ln -sfv "$DOTFILES_DIR/X/.Xdefaults" ~
-ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 
+# Git
+GITCONFIG="$DOTFILES_DIR/git/.gitconfig"
+# check if already added
+grep "$GITCONFIG" ~/.gitconfig
+if [ $? -ne 0 ]; then
+    echo "Adding to gitconfig"
+    echo -e "[include]\n    path = $GITCONFIG\n" > ~/.gitconfig.new
+    cat ~/.gitconfig >> ~/.gitconfig.new
+    mv -f ~/.gitconfig.new ~/.gitconfig
+else
+    echo "Already added to gitconfig"
+fi
