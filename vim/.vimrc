@@ -66,7 +66,7 @@ set incsearch
 set hlsearch
 
 set fillchars-=vert:\| | set fillchars+=vert:\
-set listchars=tab:>·,trail:~,extends:>,precedes:<,space:⋅
+set listchars=tab:>·,trail:~,extends:>,precedes:<,space:.
 set timeoutlen=1000 ttimeoutlen=0
 
 autocmd FileType javascript setlocal tabstop=2 softtabstop=2 expandtab shiftwidth=2
