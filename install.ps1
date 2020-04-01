@@ -41,7 +41,7 @@ try {
     $GITCONFIG_PATH = "$DOTFILES_DIR\git\.gitconfig" -replace "\\","\\"
     $GITCONFIG_PREFIX = "[include]`n    path = ""$GITCONFIG_PATH""`n"
     if (Test-Path -PathType Leaf "$HOME/.gitconfig") {
-        $GITCONFIG = Get-Content "$HOME/.gitconfig"
+        $GITCONFIG = Get-Content "$HOME/.gitconfig" -Raw
         if ($GITCONFIG -like "*$GITCONFIG_PATH*") {
             Write-Host "Already added gitconfig"
         } else {
