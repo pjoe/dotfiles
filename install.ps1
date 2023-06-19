@@ -11,11 +11,13 @@ function Exec {
 }
 
 function SymLinkForce($target, $link) {
-    if (Test-Path -PathType Leaf $target) {
+    if (Test-Path -PathType Leaf $link) {
         Write-Host "Removing existing $link"
         Remove-Item $link
     }
-    Exec { &cmd /c "mklink ""$link"" ""$target""" }
+    Echo "$link -> $target" 
+    New-Item -ItemType SymbolicLink -Path $link -Target $target
+    #Exec { &cmd /c "mklink ""$link"" ""$target""" }
 }
 
 try {
@@ -34,23 +36,23 @@ try {
     }
 
     # Create symlinks
-    SymLinkForce "$DOTFILES_DIR/tmux/.tmux.conf" "$HOME/.tmux.conf"
-    SymLinkForce "$DOTFILES_DIR/vim/.vimrc" "$HOME/.vimrc"
+    SymLinkForce "$DOTFILES_DIR\tmux\.tmux.conf" "$HOME\.tmux.conf"
+    SymLinkForce "$DOTFILES_DIR\vim\.vimrc" "$HOME\.vimrc"
 
     # gitconfig
     $GITCONFIG_PATH = "$DOTFILES_DIR\git\.gitconfig" -replace "\\","\\"
     $GITCONFIG_PREFIX = "[include]`n    path = ""$GITCONFIG_PATH""`n"
-    if (Test-Path -PathType Leaf "$HOME/.gitconfig") {
-        $GITCONFIG = Get-Content "$HOME/.gitconfig" -Raw
+    if (Test-Path -PathType Leaf "$HOME\.gitconfig") {
+        $GITCONFIG = Get-Content "$HOME\.gitconfig" -Raw
         if ($GITCONFIG -like "*$GITCONFIG_PATH*") {
             Write-Host "Already added gitconfig"
         } else {
             Write-Host "Adding gitconfig"
-            Set-Content -Path "$HOME/.gitconfig" -Value "$GITCONFIG_PREFIX`n$GITCONFIG"
+            Set-Content -Path "$HOME\.gitconfig" -Value "$GITCONFIG_PREFIX`n$GITCONFIG"
         }
     } else {
         Write-Host "Adding gitconfig"
-        Set-Content -Path "$HOME/.gitconfig" -Value $GITCONFIG_PREFIX
+        Set-Content -Path "$HOME\.gitconfig" -Value $GITCONFIG_PREFIX
     }
 
     Write-Host "Done"
