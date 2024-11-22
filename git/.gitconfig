@@ -10,6 +10,8 @@
 	st = status
 	ci = commit
 	co = checkout
+	bruntracked = !git for-each-ref --format '%(refname:short) %(upstream:track)' refs/heads | grep -F" [gone]"
+	brprune = !git bruntracked | sed 's/\\[gone\\]//' | xargs git branch -d
 [diff]
 	tool = meld
 [gui]
